@@ -1,0 +1,1 @@
+export { default as Navbar } from "./Navbar"    // eska mtlb navbar different way me display hoga
