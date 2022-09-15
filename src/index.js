@@ -1,15 +1,20 @@
+import React from 'react';
 import react from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-// import "./App.css";
-import App from './App';
+import App from './App'
+import store from './app/store';
+import 'antd/dist/antd.css'
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+{/* which means app will have the access towards the store Provider */}
+ReactDOM.render(
+<Router>
+  <Provider store={store}>
+  <App/>
+  </Provider>
+</Router>,document.getElementById('root')
+)
 
-root.render(
-    <Router>
-      <App />
-    </Router>
-);
-
+// ReactDOM.render(<App />,document.getElementById('root'));
